@@ -43,11 +43,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
+    <Compile Include="App.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="res\labs.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="dataModels\" />
+    <Folder Include="utils\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\analyzes.json" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
