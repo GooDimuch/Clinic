@@ -33,6 +33,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -44,18 +47,33 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App.cs" />
+    <Compile Include="dataModels\Address.cs" />
+    <Compile Include="dataModels\Analyze.cs" />
+    <Compile Include="dataModels\Lab.cs" />
+    <Compile Include="dataModels\Phone.cs" />
+    <Compile Include="dataModels\Schedule.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="utils\Constants.cs" />
+    <Compile Include="utils\CustomEventHandler.cs" />
+    <Compile Include="utils\FileUtils.cs" />
+    <Compile Include="utils\JsonHelper.cs" />
+    <Compile Include="utils\Utils.cs" />
+    <Compile Include="windows\mainWindow\CustomViewController.cs" />
+    <Compile Include="windows\mainWindow\CustomView.cs" />
+    <Compile Include="windows\mainWindow\ICustomView.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="res\labs.json" />
+    <None Include="packages.config" />
+    <None Include="res\labs.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="dataModels\" />
-    <Folder Include="utils\" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="res\analyzes.json" />
+    <None Include="res\analyzes.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
